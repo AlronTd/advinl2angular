@@ -1,0 +1,14 @@
+.sci button.btn{
+    padding: 0.2em 0.7em !important;
+}
+
+.total-price {
+    font-size: 1.1em;
+}
+
+.ml-auto{
+  margin-left: auto !important;
+}
+.mr-auto{
+  margin-right: auto !important;
+}

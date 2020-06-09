@@ -1,0 +1,67 @@
+<!-- <p>shopping-cart works!</p> -->
+<div class="dropdown" mdbDropdown>
+    <button mdbDropdownToggle type="button" mdbBtn color="default" class="nav-link mr-4 dropdown-toggle waves-light"
+        mdbWavesEffect data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{shoppingcart.getTotalQuantity()}} <i class="fas fa-shopping-cart"></i>
+    </button>
+    <div class="dropdown-menu dropdown-default dropdown-menu-left z-depth-2 shopping-cart">
+
+        <app-shopping-cart-product *ngFor="let item of shoppingcart.cart" [item]="item"></app-shopping-cart-product>
+
+        <div *ngIf="!hasItems()" (click)="stopClose($event)" class="dropdown-item">
+            <div class="cart-item">
+                <div class="p-2 d-flex justify-content-center align-items-center">
+                    <div class="d-flex align-items-center">
+                        Din kundvagn är tom.
+                    </div>
+                </div>
+                <div class="divider dropdown-divider"></div>
+            </div>
+        </div>
+
+
+        <div *ngIf="hasItems()" (click)="stopClose($event)" class=" p-2 sci dropdown-item">
+            <div class="ml-2">
+                <div class="total-price">
+                    Totalt: <span class="ml-1">{{ shoppingcart.getTotalPrice() }} SEK</span>
+                </div>
+                <small class="text-muted">inkl. moms</small>
+            </div>
+            <button class="btn btn-default">Gå till Kassan</button>
+        </div>
+    </div>
+</div>
+<!-- <MDBDropdown>
+    <MDBDropdownToggle nav caret className="mr-4">
+        {{ totalCartQuantity }}
+        <MDBIcon fas icon="shopping-cart" />
+    </MDBDropdownToggle>
+    <MDBDropdownMenu className="dropdown-menu-left z-depth-2 shopping-cart" onClick={stopClose}>
+
+        <ShoppingCartProduct *ngFor="let item of shoppingCart" [(item)]="item" />
+
+
+        <MDBDropdownItem *ngIf="shoppingCart.length < 1" onClick={stopClose}>
+        <div className="cart-item" onClick={stopClose}>
+            <div className="p-2 d-flex justify-content-center align-items-center" onClick={stopClose}>
+                <div className="d-flex align-items-center" onClick={stopClose}>
+                    Din kundvagn är tom.
+                </div>
+            </div>
+            <div className="dropdown-divider"></div>
+        </div>
+        </MDBDropdownItem>
+
+
+        <MDBDropdownItem className="p-2 sci" onClick={stopClose}>
+            <div className="ml-2" onClick={stopClose}>
+                <div className="total-price" onClick={stopClose}>
+                    <div>Totalt:</div> <span className="ml-1">{ shoppingCartTotal} SEK </span>
+                    <small className="text-muted">inkl. moms</small>
+                </div>
+
+            </div>
+            <button className="btn btn-default">Gå till Kassan</button>
+        </MDBDropdownItem>
+    </MDBDropdownMenu>
+</MDBDropdown> -->

@@ -1,0 +1,44 @@
+<!-- <p>navbar works!</p> -->
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color fixed-top scrolling-navbar">
+    <div class="container">
+        <a routerLink="/" class="navbar-brand">
+            <i class="fab fa-shopware"></i> shopware.se
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <!-- ShoppingCart -->
+                <li class="nav-item">
+                    <app-shopping-cart></app-shopping-cart>
+                </li>
+
+                <!-- UserSettings -->
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- <MDBNavbarNav right>
+                ShoppingCart
+                <MDBNavItem>
+                    <ShoppingCart />
+                </MDBNavItem>
+
+                UserSettings
+                <MDBNavItem>
+                    <MDBNavLink className="waves-effect waves-light" to={location.pathname}>
+                        <MDBIcon icon="user" />
+                    </MDBNavLink>
+                </MDBNavItem>
+            </MDBNavbarNav> -->
+        </div>
+    </div>
+</nav>
+<!--/.Navbar -->

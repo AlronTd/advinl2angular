@@ -1,0 +1,15 @@
+<!-- <p>shopping-cart-product works!</p> -->
+<div (click)="stopClose($event)" class="dropdown-item sci border-bottom border-light mw-100">
+
+    <div class="mw-100">
+        <!-- <Link to={'/product/' + props.item._id}> -->
+        <span class="mr-auto">{{item.name}}</span>
+        <br />
+        <!-- </Link> -->
+        <div class="text-right d-inline-block ml-auto">
+            <button (click)="increment($event)" class="btn btn-default single-char">+</button>
+            <span class="mx-3">{{item.quantity}}</span>
+            <button (click)="decrement($event)" class="btn btn-default single-char">-</button>
+        </div>
+    </div>
+</div>
